@@ -2,7 +2,7 @@ package br.edu.univas;
 
 import java.util.Scanner;
 
-public class Atividade03 {
+public class Ativ_03_15.03 {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
 
