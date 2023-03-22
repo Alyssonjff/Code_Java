@@ -7,7 +7,7 @@
 
 import java.util.Scanner;
 
-public class Questao04 {
+public class Questao_04 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Por favor digite o seu CPF: ");
