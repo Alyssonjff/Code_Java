@@ -1,29 +1,33 @@
+/*
+ Em uma determinada rotina o programa precisa trabalhar com Strings de exatos
+ 40 caracteres, porém o usuário pode digitar textos com diferentes quantidades
+ de caracteres. Escreva um programa que obtém uma palavra digitada pelo
+ usuário e preenche à esquerda com quantidade de _ que faltam para preencher
+ 40 caracteres. O programa não deve aceitar palavras que contenham mais que
+ 40 characters e não deve aceitar string vazias.
+ */
+
 import java.util.Scanner;
 
 public class Questao_01 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        System.out.println("Por favor digite um palavra: ");
+        int aux = 40;
+        int stringLimit = 40;
+        System.out.print("Escreva a palavra: ");
         String readWord = scan.nextLine();
-        String result = removeDuplicate(readWord);
-        System.out.println("A palavra digitada sem as letras duplicadas é: " + result);
-    }
 
-    public static String removeDuplicate(String readWord) {
-        String result = "";
-        for (int i = 0; i < readWord.length(); i++) {
-            char aux = readWord.charAt(i);
-            boolean duplicate = false;
-            for (int j = 0; j < i; j++) {
-                if (readWord.charAt(j) == aux) {
-                    duplicate = true;
-                    break;
-                }
+        if (readWord.length() == 0) {
+            System.out.println("Por favor digite a palavra, String vazia não é válida.");
+        } else if (readWord.length() > stringLimit) {
+            System.out.println("Por favor digite a palavra, String não aceita palavras acima de 40 caractere.");
+        }else{
+            aux = stringLimit - readWord.length();
+            for(int i = 0; i < aux; i++){
+                System.out.print("_");
             }
-            if (!duplicate) {
-                result += aux;
-            }
+            System.out.println(readWord);
         }
-        return result;
+
     }
 }
