@@ -3,7 +3,7 @@
  maiúscula.
  */
 import java.util.Scanner;
-public class Questao03 {
+public class Questao_03 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         String readWord = "";
